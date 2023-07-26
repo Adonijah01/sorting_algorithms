@@ -1,20 +1,3 @@
-0x1B. C - Sorting algorithms & Big O
-
-
-
-
-In a nutshell…
-
-    Contribution: 100.0%
-    Auto QA review: 0.0/48 mandatory & 0.0/100 optional
-    Altogether:  0.0%
-        Mandatory: 0.0%
-        Optional: 0.0%
-        Contribution: 100.0%
-        Calculation:  100.0% * (0.0% + (0.0% * 0.0%) )  == 0.0%
-
-
-
 Background Context
 
 This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
