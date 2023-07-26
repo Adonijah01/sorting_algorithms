@@ -1,50 +1,45 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swapintegerz in a array.
- * @a: first integr to swap
- * @b: Second integr swap
- */
-void swap_ints(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-/**
- * bubble_sort - sort array  integers in order of ascending.
- * @array: array of integes to sort
+ * bubble_sort - algo
+ * @array: array 
  * @size: size of array
- *
- * Description: prints rray after aech swap
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len = size;
-	bool bubbly = false;
+	size_t i, j;
+	bool is_swapped = false;
 
-	if (array == NULL || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
-	while (bubbly == false)
+	for (i = 0; i < size - 1; i++)
 	{
-		bubbly = true;
-		for (i = 0; i < len - 1; i++)
+		for (j = 0; j < size - 1 - i; j++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[j] > array[j + 1])
 			{
-				swap_ints(array + i, array + i + 1);
+				swap(&array[j], &array[j + 1]);
+				is_swapped = true;
 				print_array(array, size);
-				bubbly = false;
 			}
 		}
-		len--;
+		if (!is_swapped)
+			break;
 	}
 }
+
 /**
- * adonijah kiplimo
- *
+ * swap - swap elements
+ * @first_element: first
+ * @second_element: second
+ */
+void swap(int *first_element, int *second_element)
+{
+	int temp = *first_element;
+	*first_element = *second_element;
+	*second_element = temp;
+}
+/**
+ * Adonijah kiplimo
  */
